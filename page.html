@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafael Lima | Links</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Google Fonts (Inter) -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0a0a12;
+            color: white;
+        }
+
+        /* Custom Animations */
+        @keyframes tilt {
+            0%, 50%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(1deg); }
+            75% { transform: rotate(-1deg); }
+        }
+        .animate-tilt {
+            animation: tilt 10s infinite linear;
+        }
+
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+        
+        .fade-in-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Glassmorphism utilities */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+    </style>
+</head>
+<body class="min-h-screen overflow-x-hidden selection:bg-purple-500 selection:text-white">
+
+    <!-- Background Ambient Glows -->
+    <div class="fixed top-0 left-0 w-full h-full overflow-hidden z-0 pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-purple-600/20 rounded-full blur-[120px] mix-blend-screen animate-pulse" style="animation-duration: 4s;"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] mix-blend-screen"></div>
+        <div class="absolute top-[40%] left-[50%] transform -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-indigo-500/10 rounded-full blur-[100px]"></div>
+    </div>
+
+    <div class="relative z-10 max-w-lg mx-auto px-6 py-12 flex flex-col items-center min-h-screen justify-between">
+        
+        <main class="w-full flex flex-col items-center">
+            
+            <!-- Avatar Section -->
+            <div id="avatar-section" class="fade-in-up">
+                <div class="relative group cursor-pointer">
+                    <!-- Animated Border Ring -->
+                    <div class="absolute -inset-1 bg-gradient-to-r from-purple-600 via-blue-500 to-purple-600 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                    
+                    <!-- Image Container -->
+                    <div class="relative w-28 h-28 rounded-full p-1 bg-[#0a0a12] flex items-center justify-center overflow-hidden border border-white/10">
+                        <img 
+                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" 
+                            alt="Rafael Lima" 
+                            class="w-full h-full object-cover rounded-full filter brightness-110"
+                        >
+                    </div>
+                    
+                    <!-- Status Indicator -->
+                    <div class="absolute bottom-1 right-1 w-6 h-6 bg-[#0a0a12] rounded-full flex items-center justify-center">
+                        <div class="w-4 h-4 bg-green-500 rounded-full border-2 border-[#0a0a12] animate-pulse"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Profile Info -->
+            <div id="profile-info" class="mt-6 text-center fade-in-up" style="transition-delay: 100ms;">
+                <h1 class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-white via-gray-200 to-gray-400">
+                    Rafael Lima
+                </h1>
+                <p class="text-purple-400 font-medium text-sm mt-1">@rafaellima.ai</p>
+                <p class="text-gray-400 text-sm mt-2 max-w-xs mx-auto leading-relaxed border-b border-white/5 pb-4 mb-4">
+                    IA aplicada a vendas e automações
+                </p>
+
+                <!-- Bio Points -->
+                <div class="flex flex-col gap-2 text-left w-full max-w-xs mx-auto text-xs text-gray-300">
+                    <div class="flex items-start gap-2">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-500 shrink-0 mt-0.5"></i>
+                        <span>Implanto agentes de IA que vendem e captam leads 24/7</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-500 shrink-0 mt-0.5"></i>
+                        <span>Sem precisar contratar SDRs ou aumentar equipe</span>
+                    </div>
+                    <div class="flex items-start gap-2">
+                        <i data-lucide="check-circle-2" class="w-4 h-4 text-purple-500 shrink-0 mt-0.5"></i>
+                        <span>Especialista em negócios</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Buttons Area -->
+            <div class="w-full mt-10 space-y-4">
+                
+                <!-- Link 1: Destaque -->
+                <a href="https://docs.google.com/document/d/1EGo_6Uwb4BWVGNTPvy-vFti6X6p_7sq-mplHH9c0o-Y/edit?usp=sharing" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="group relative flex items-center justify-between w-full p-4 rounded-2xl border border-purple-500/50 bg-gradient-to-r from-purple-900/40 to-blue-900/40 transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 active:scale-95 hover:border-purple-400 hover:shadow-[0_0_20px_rgba(168,85,247,0.3)] fade-in-up"
+                   style="transition-delay: 200ms;">
+                    
+                    <!-- Glow effect on hover -->
+                    <div class="absolute inset-0 rounded-2xl bg-gradient-to-r from-purple-600/20 to-blue-600/20 blur-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                    <div class="flex items-center gap-4 relative z-10">
+                        <div class="p-3 rounded-xl bg-purple-600 text-white transition-colors">
+                            <i data-lucide="bot" class="w-6 h-6"></i>
+                        </div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-sm text-gray-100 group-hover:text-white transition-colors">
+                                PROMPT AGENTE BASE PROSPEKTIA
+                            </h3>
+                            <p class="text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
+                                Estrutura completa para agente de atendimento
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative z-10 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-purple-400">
+                        <i data-lucide="external-link" class="w-5 h-5"></i>
+                    </div>
+                </a>
+
+                <!-- Link 2: Padrão -->
+                <a href="https://docs.google.com/document/d/1PHRdWwctpz5MJkb5CmZQepvInkM5mstBQu5icPr6kPU/edit?usp=sharing" 
+                   target="_blank" 
+                   rel="noopener noreferrer"
+                   class="group relative flex items-center justify-between w-full p-4 rounded-2xl border border-white/10 bg-white/5 transition-all duration-300 transform hover:scale-[1.02] hover:-translate-y-1 active:scale-95 hover:bg-white/10 hover:border-white/20 hover:shadow-lg fade-in-up"
+                   style="transition-delay: 350ms;">
+                    
+                    <div class="flex items-center gap-4 relative z-10">
+                        <div class="p-3 rounded-xl bg-white/10 text-gray-300 group-hover:text-white group-hover:bg-white/20 transition-colors">
+                            <i data-lucide="send" class="w-6 h-6"></i>
+                        </div>
+                        <div class="text-left">
+                            <h3 class="font-bold text-sm text-gray-100 group-hover:text-white transition-colors">
+                                PROMPT BASE AGENTE DE DISPARO
+                            </h3>
+                            <p class="text-xs text-gray-400 group-hover:text-gray-300 transition-colors">
+                                Script otimizado para prospecção ativa
+                            </p>
+                        </div>
+                    </div>
+                    <div class="relative z-10 opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 text-purple-400">
+                        <i data-lucide="external-link" class="w-5 h-5"></i>
+                    </div>
+                </a>
+
+            </div>
+            
+            <!-- Social Mini Links -->
+            <div class="flex gap-6 mt-8 fade-in-up" style="transition-delay: 500ms;">
+                <a href="https://www.instagram.com/rafaellima.ai" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-purple-400 transition-colors transform hover:scale-110">
+                    <i data-lucide="instagram" class="w-6 h-6"></i>
+                </a>
+            </div>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="mt-12 text-center opacity-60 hover:opacity-100 transition-opacity">
+            <div class="flex items-center justify-center gap-2 mb-2">
+                <i data-lucide="zap" class="w-4 h-4 text-yellow-400 fill-yellow-400"></i>
+                <span class="text-xs font-semibold tracking-wider text-gray-400 uppercase">Powered by AI</span>
+            </div>
+            <p class="text-[10px] text-gray-500" id="year-text">
+                © 2024 Rafael Lima. All rights reserved.
+            </p>
+        </footer>
+
+    </div>
+
+    <script>
+        // Inicializa os ícones do Lucide
+        lucide.createIcons();
+
+        // Animação de entrada ao carregar a página
+        window.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.fade-in-up');
+            
+            // Pequeno delay para garantir que o CSS carregou
+            setTimeout(() => {
+                animatedElements.forEach(el => {
+                    el.classList.add('visible');
+                });
+            }, 100);
+
+            // Atualiza o ano no rodapé automaticamente
+            document.getElementById('year-text').innerText = `© ${new Date().getFullYear()} Rafael Lima. All rights reserved.`;
+        });
+    </script>
+</body>
+</html>
